@@ -1,0 +1,32 @@
+{
+  "appId": "com.pixeltechrd.client",
+  "productName": "PixelTechRD-Client",
+  "directories": {
+    "output": "dist/client"
+  },
+  "files": [
+    "main-client.js",
+    "client/**/*",
+    "node_modules/**/*",
+    "!node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}",
+    "!node_modules/*/{test,__tests__,tests,powered-test,example,examples}",
+    "!node_modules/*.d.ts",
+    "!node_modules/.bin"
+  ],
+  "asarUnpack": [
+    "client/**/*",
+    "node_modules/screenshot-desktop/**/*",
+    "node_modules/sharp/**/*",
+    "node_modules/@img/**/*"
+  ],
+  "win": {
+    "target": "nsis",
+    "requestedExecutionLevel": "requireAdministrator"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "shortcutName": "PixelTechRD Client"
+  }
+}

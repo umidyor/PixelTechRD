@@ -1,0 +1,34 @@
+{
+  "appId": "com.pixeltechrd.operator",
+  "productName": "PixelTechRD-Operator",
+  "directories": {
+    "output": "dist/operator"
+  },
+  "files": [
+    "main-operator.js",
+    "package-operator.json",
+    "operator/**/*",
+    "node_modules/ws/**/*"
+  ],
+  "extraResources": [
+    {
+      "from": "package-operator.json",
+      "to": "../package.json"
+    }
+  ],
+  "asarUnpack": [
+    "operator/**/*"
+  ],
+  "win": {
+    "target": "nsis",
+    "requestedExecutionLevel": "requireAdministrator",
+    "sign": null,
+    "verifyUpdateCodeSignature": false
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "shortcutName": "PixelTechRD Operator"
+  }
+}

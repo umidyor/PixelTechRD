@@ -1,0 +1,10 @@
+{
+  "name": "pixeltechrd-operator",
+  "version": "1.0.0",
+  "description": "PixelTechRD Operator Application",
+  "main": "main-operator.js",
+  "author": "PixelTech",
+  "dependencies": {
+    "ws": "^8.14.2"
+  }
+}

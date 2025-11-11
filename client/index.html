@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PixelTechRD Client</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🖥️ PixelTechRD Client</h1>
+      <p>Remote Support Session</p>
+    </div>
+
+    <div class="content">
+      <div class="form-group">
+        <label for="roomInput">Room ID:</label>
+        <input type="text" id="roomInput" placeholder="Enter room ID from operator">
+      </div>
+
+      <div class="button-group">
+        <button id="connectBtn" class="btn btn-primary">Connect</button>
+        <button id="disconnectBtn" class="btn btn-danger" disabled>Disconnect</button>
+      </div>
+
+      <div class="status">
+        <span id="statusText">● Not connected</span>
+      </div>
+
+      <div class="warning">
+        ⚠️ Your screen will be shared and remotely controlled
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>© 2024 DECOLINE DESIGN | PixelTechRD v1.0</p>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

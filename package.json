@@ -1,0 +1,23 @@
+{
+  "name": "pixeltechrd",
+  "version": "1.0.0",
+  "description": "PixelTechRD - Professional Remote Desktop Application",
+  "main": "main.js",
+  "author": "PixelTech",
+  "scripts": {
+    "start": "electron .",
+    "start:client": "electron main-client.js",
+    "start:operator": "electron main-operator.js",
+    "build:client": "node build-client.js",
+    "build:operator": "node build-operator.js",
+    "build:all": "npm run build:client && npm run build:operator"
+  },
+  "dependencies": {
+    "screenshot-desktop": "^1.12.7",
+    "ws": "^8.14.2"
+  },
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "electron-builder": "^24.6.4"
+  }
+}

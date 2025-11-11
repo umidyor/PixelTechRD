@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PixelTechRD Operator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Login Screen -->
+  <div id="loginScreen" class="login-screen">
+    <div class="login-container">
+      <div class="login-header">
+        <h1>🖥️ PixelTechRD</h1>
+        <p>Operator Control Panel</p>
+      </div>
+      <div class="login-content">
+        <div class="form-group">
+          <label for="roomInput">Room ID:</label>
+          <input type="text" id="roomInput" placeholder="Enter or generate room ID">
+        </div>
+        <button id="connectBtn" class="btn btn-primary">Connect to Room</button>
+        <button id="generateBtn" class="btn btn-secondary">Generate New Room</button>
+      </div>
+      <div class="footer">
+        <p>© 2024 DECOLINE DESIGN | PixelTechRD v1.0</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Control Screen -->
+  <div id="controlScreen" class="control-screen" style="display: none;">
+    <!-- Toolbar -->
+    <div class="toolbar">
+      <div class="toolbar-left">
+        <span class="toolbar-label">Room:</span>
+        <span id="roomLabel" class="toolbar-value">-</span>
+        <span id="statusLabel" class="status-badge">⏳ Waiting for client</span>
+      </div>
+      <div class="toolbar-right">
+        <span class="toolbar-label">FPS:</span>
+        <span id="fpsLabel" class="toolbar-value">0</span>
+        <button id="disconnectBtn" class="btn btn-danger btn-small">Disconnect</button>
+      </div>
+    </div>
+
+    <!-- Canvas Area -->
+    <div class="canvas-container">
+      <canvas id="screenCanvas"></canvas>
+      <div id="waitingOverlay" class="waiting-overlay">
+        <div class="waiting-content">
+          <div class="spinner"></div>
+          <h2>⏳ Waiting for client...</h2>
+          <p>Share the Room ID with your client</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
